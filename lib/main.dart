@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:weather_app/bloc/suggestions_popup/suggestions_popup_cubit.dart';
 import 'package:weather_app/ui/screens/main_screen.dart';
 import 'package:weather_app/ui/theme/app_theme.dart';
+
 import 'bloc/suggestion_cities/suggestion_cities_cubit.dart';
 import 'bloc/weather_info/weather_info_cubit.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         Provider<WeatherCubit>(
-          create: (context) => WeatherCubit()..getWeatherByName('Odessa'),
+          create: (context) => WeatherCubit()..getWeatherByName('Jakarta'),
         ),
         Provider<SuggestionsCubit>(
           create: (context) => SuggestionsCubit(),

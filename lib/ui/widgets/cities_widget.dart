@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/helpers/strings.dart';
+
 import 'city_card.dart';
 
 class CitiesGrid extends StatelessWidget {
   const CitiesGrid({
     Key? key,
-    required this.onNewYorkPress,
-    required this.onParisPress,
-    required this.onDubaiPress,
-    required this.onLondonPress,
+    required this.onBaliPress,
+    required this.onSemarangPress,
+    required this.onSurabayaPress,
+    required this.onBandungPress,
   }) : super(key: key);
 
-  final VoidCallback onNewYorkPress;
-  final VoidCallback onLondonPress;
-  final VoidCallback onDubaiPress;
-  final VoidCallback onParisPress;
+  final VoidCallback onBaliPress;
+  final VoidCallback onBandungPress;
+  final VoidCallback onSurabayaPress;
+  final VoidCallback onSemarangPress;
 
   @override
   Widget build(BuildContext context) {
@@ -33,24 +34,24 @@ class CitiesGrid extends StatelessWidget {
         const SizedBox(height: 35),
         CityCard(
             cardHeight: cardHeight,
-            cityImg: 'assets/images/bg_nyc.jpg',
-            cityName: 'New York',
-            onCityTap: onNewYorkPress),
+            cityImg: 'assets/images/bg_bali.jpg',
+            cityName: 'Bali',
+            onCityTap: onBaliPress),
         CityCard(
             cardHeight: cardHeight,
-            cityImg: 'assets/images/bg_london.jpg',
-            cityName: 'London',
-            onCityTap: onLondonPress),
+            cityImg: 'assets/images/bg_bandung.jpg',
+            cityName: 'Bandung',
+            onCityTap: onBandungPress),
         CityCard(
             cardHeight: cardHeight,
-            cityImg: 'assets/images/bg_dubai.jpg',
-            cityName: 'Dubai',
-            onCityTap: onDubaiPress),
+            cityImg: 'assets/images/bg_surabaya.jpg',
+            cityName: 'Surabaya',
+            onCityTap: onSurabayaPress),
         CityCard(
             cardHeight: cardHeight,
-            cityImg: 'assets/images/bg_paris.jpg',
-            cityName: 'Paris',
-            onCityTap: onParisPress),
+            cityImg: 'assets/images/bg_semarang.jpg',
+            cityName: 'Semarang',
+            onCityTap: onSemarangPress),
       ],
     );
   }

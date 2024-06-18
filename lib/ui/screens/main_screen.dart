@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:weather_app/ui/appbar/simple_custom_app_bar.dart';
 import 'package:weather_app/bloc/suggestions_popup/suggestions_popup_cubit.dart';
 import 'package:weather_app/bloc/suggestions_popup/suggestions_popup_state.dart';
 import 'package:weather_app/bloc/weather_info/weather_info_cubit.dart';
 import 'package:weather_app/bloc/weather_info/weather_info_state.dart';
 import 'package:weather_app/helpers/custom_colors.dart';
 import 'package:weather_app/helpers/strings.dart';
+import 'package:weather_app/ui/appbar/simple_custom_app_bar.dart';
 import 'package:weather_app/ui/widgets/faq_widget.dart';
+
 import '../../bloc/suggestion_cities/suggestion_cities_cubit.dart';
 import '../../bloc/suggestion_cities/suggestion_cities_state.dart';
 import '../../helpers/utils.dart';
@@ -80,20 +81,20 @@ class MainScreen extends StatelessWidget {
               ),
             ),
             CitiesGrid(
-              onDubaiPress: () => {
-                cubit.getWeatherByName('Dubai'),
+              onSurabayaPress: () => {
+                cubit.getWeatherByName('Surabaya'),
                 animateToTop(_scrollController)
               },
-              onLondonPress: () => {
-                cubit.getWeatherByName('London'),
+              onBandungPress: () => {
+                cubit.getWeatherByName('Bandung'),
                 animateToTop(_scrollController)
               },
-              onNewYorkPress: () => {
-                cubit.getWeatherByName('New York'),
+              onBaliPress: () => {
+                cubit.getWeatherByName('Bali'),
                 animateToTop(_scrollController)
               },
-              onParisPress: () => {
-                cubit.getWeatherByName('Paris'),
+              onSemarangPress: () => {
+                cubit.getWeatherByName('Semarang'),
                 animateToTop(_scrollController)
               },
             ),
