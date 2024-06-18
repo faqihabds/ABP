@@ -61,9 +61,9 @@ class _FaqScreenState extends State<FaqScreen> {
                   const Padding(
                     padding: EdgeInsets.only(left: 36),
                     child: Text(
-                      'Question 1',
+                      'Apa itu Aplikasi Cuaca Ini?',
                       style:
-                          TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                     ),
                   ),
                   Padding(
@@ -94,7 +94,7 @@ class _FaqScreenState extends State<FaqScreen> {
                           fontWeight: FontWeight.w400,
                           height: 2.1 //You can set your custom height here
                           ),
-                      Strings.answer,
+                      'Aplikasi cuaca ini adalah sebuah aplikasi mobile yang dirancang untuk memberikan informasi cuaca terkini serta perkiraan cuaca untuk berbagai lokasi di seluruh dunia. Dengan antarmuka yang user-friendly, aplikasi ini memungkinkan pengguna untuk dengan mudah memeriksa kondisi cuaca saat ini, prakiraan cuaca harian dan mingguan, serta informasi lainnya seperti kecepatan angin, kelembapan, dan indeks UV. Aplikasi ini cocok digunakan oleh siapa saja yang ingin tetap up-to-date dengan kondisi cuaca, baik untuk perencanaan aktivitas harian, perjalanan, atau hanya untuk mengetahui cuaca di sekitar mereka.',
                     ),
                   ),
                 ),
@@ -117,12 +117,15 @@ class _FaqScreenState extends State<FaqScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Padding(
-                    padding: EdgeInsets.only(left: 36),
-                    child: Text(
-                      'Question 2',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+                  Flexible(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 36),
+                      child: Text(
+                        'Apakah Aplikasi Ini Bekerja Tanpa Koneksi Internet?',
+                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                        softWrap: true,
+                        overflow: TextOverflow.visible,
+                      ),
                     ),
                   ),
                   Padding(
@@ -153,7 +156,7 @@ class _FaqScreenState extends State<FaqScreen> {
                           fontWeight: FontWeight.w400,
                           height: 2.1 //You can set your custom height here
                           ),
-                      Strings.answer,
+                      'Aplikasi cuaca ini membutuhkan koneksi internet untuk mengambil dan memperbarui data cuaca dari server. Tanpa koneksi internet, aplikasi tidak dapat menampilkan informasi cuaca terkini atau memperbarui data cuaca. Namun, informasi cuaca yang telah diunduh sebelumnya mungkin masih tersedia untuk sementara waktu sampai Anda terhubung kembali ke internet. Oleh karena itu, untuk mendapatkan informasi cuaca yang akurat dan terbaru, pastikan perangkat Anda terhubung ke internet.',
                     ),
                   ),
                 ),
@@ -176,12 +179,15 @@ class _FaqScreenState extends State<FaqScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Padding(
-                    padding: EdgeInsets.only(left: 36),
-                    child: Text(
-                      'Question 3',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+                  Flexible(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 36),
+                      child: Text(
+                        'Bagaimana cara menggunakan aplikasi cuaca ini untuk memeriksa cuaca di lokasi saya?',
+                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                        softWrap: true,
+                        overflow: TextOverflow.visible,
+                      ),
                     ),
                   ),
                   Padding(
@@ -212,66 +218,7 @@ class _FaqScreenState extends State<FaqScreen> {
                           fontWeight: FontWeight.w400,
                           height: 2.1 //You can set your custom height here
                           ),
-                      Strings.answer,
-                    ),
-                  ),
-                ),
-              )
-            : const SizedBox(),
-        GestureDetector(
-          onTap: () => {
-            setState(() => questionFourthVisibility = !questionFourthVisibility)
-          },
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(30),
-                  ),
-                  color: CustomColors.lightGrey),
-              height: tileHeight,
-              width: double.infinity,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.only(left: 36),
-                    child: Text(
-                      'Question 4',
-                      style:
-                          TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 36),
-                    child: Icon(questionFourthVisibility
-                        ? Icons.keyboard_arrow_down
-                        : Icons.keyboard_arrow_up),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-        questionFourthVisibility
-            ? Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                child: Container(
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(30),
-                      ),
-                      color: CustomColors.lightGrey),
-                  child: const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                    child: Text(
-                      style: TextStyle(
-                          fontSize: 14.0,
-                          fontWeight: FontWeight.w400,
-                          height: 2.1 //You can set your custom height here
-                          ),
-                      Strings.answer,
+                      'Untuk memeriksa cuaca di lokasi Anda menggunakan aplikasi ini, cukup ketik nama kota Anda di kolom pencarian. Setelah itu, pilih kota dan negara yang sesuai dari daftar yang muncul. Dengan begitu, Anda dapat melihat informasi cuaca terkini untuk lokasi Anda dengan mudah.',
                     ),
                   ),
                 ),
